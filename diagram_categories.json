@@ -1,0 +1,1910 @@
+{
+    "circuit": {
+        "name": "electrical circuit",
+        "group": "domain-specific",
+        "terms_semantic": [
+            "electrical engineer",
+            "circuit",
+            "schematic",
+            "netlist",
+            "electronics design",
+            "capacitor",
+            "inductor",
+            "resistor",
+            "electrical schematic",
+            "analog electronics",
+            "Ohm's law",
+            "SPICE model",
+            "voltage analysis",
+            "current analysis",
+            "power electronics",
+            "Kirchhoff's law",
+            "multimeter",
+            "electrical prototyp",
+            "LTspice",
+            "KiCad",
+            "EDIF",
+            "CircuiTikZ",
+            "PySpice"
+        ],
+        "search_queries": [
+            "Design and analysis of electrical circuits involving resistors, capacitors, and inductors using electronics design tools and fundamental laws such as Ohm's law and Kirchhoff's law.",
+            "Electrical engineer creating an electrical schematic and netlist for analog electronics or power electronics circuits using KiCad, LTspice, or CircuiTikZ with simulation via SPICE model or PySpice.",
+            "Electrican performing voltage analysis and current analysis on an electrical prototype using a multimeter and simulation software like LTspice or EDIF, supported by tools such as KiCad and PySpice for accurate circuit design.",
+            "University professor for electrical engineering who teaches circuit design for analog electronics using SPICE netlists for electrical schematics.",
+            "electrical engineer, circuit, schematic, netlist, electronics design, capacitor, inductor, resistor, electrical schematic, analog electronics, Ohm's law, SPICE model, voltage analysis, current analysis, power electronics, Kirchhoff's law, multimeter, electrical prototyp, LTspice, KiCad, EDIF, CircuiTikZ, PySpice"
+        ],
+        "language": {
+            "spice": {
+                "language": "SPICE Netlist",
+                "renderer": "circuit_spice",
+                "ext": "net",
+                "code_instruct": "The netlist should not contain control statements or dot commands.",
+                "stats_limits": {"max_node": "all", "max_thresh": 10, "min_node": "sum", "min_thresh": 1}
+            },
+            "tikz": {
+                "language": "CircuiTikZ",
+                "renderer": "tikz_circuit",
+                "ext": "tikz",
+                "code_instruct": "The components should be positioned correctly and orthogonally. The TikZ code should not contain comments or textual descriptions and should start with '''\\begin{circuitikz}'''."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": ["Manufacturing", "Blockchain", "Nanotechnology", "Telecommunications", "Electronics", "Computer Science", "Automation Technology", "Photography"],
+            "contrary_personas": [
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "class",
+                "bpmn",
+                "sql",
+                "mind",
+                "kg"
+            ],
+            "contrary_categories": [
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "class",
+                "bpmn",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "hdl": {
+        "name": "digital hardware design",
+        "group": "domain-specific",
+        "terms_semantic": [
+            "digital design engineer",
+            "hardware description language (HDL)",
+            "VHDL",
+            "Verilog",
+            "register transfer level",
+            "field-programmable gate array (FPGA)",
+            "application-specific integrated circuit (ASIC)",
+            "chip design",
+            "flip-flop",
+            "logic gates",
+            "digital systems",
+            "hardware simulation",
+            "hardware design",
+            "digital design verification",
+            "digital logic",
+            "logic simulation",
+            "digital circuit",
+            "digital electronics",
+            "digital development",
+            "gate-level design",
+            "Yosys",
+            "sequential logic",
+            "combinational logic"
+        ],
+        "search_queries": [
+            "Digital hardware design involves creating digital systems using hardware description languages like VHDL and Verilog, focusing on register transfer level and gate-level design for FPGA and ASIC implementations.",
+            "Digital design engineer specializing in digital logic and hardware design, experienced in Verilog and VHDL, with expertise in FPGA development, logic simulation using Yosys, and verification of sequential and combinational logic circuits.",
+            "Professional in digital development working on chip design and digital circuit implementation, utilizing hardware simulation and logic gates to verify digital electronics systems for ASIC and FPGA applications.",
+            "University professor for digital systems who teaches digital hardware design for FPGAs and ASICs using hardware description languages VHDL and Verilog.",
+            "digital design engineer, hardware description language (HDL), VHDL, Verilog, register transfer level, field-programmable gate array (FPGA), application-specific integrated circuit (ASIC), chip design, flip-flop, logic gates, digital systems, hardware simulation, hardware design, digital design verification, digital logic, logic simulation, digital circuit, digital electronics, digital development, gate-level design, Yosys, sequential logic, combinational logic"
+        ],
+        "language": {
+            "vhdl": {
+                "language": "VHDL",
+                "renderer": "hdl_vhdl",
+                "ext": "vhd",
+                "code_instruct": "The code should be for a single entity."
+            },
+            "verilog": {
+                "language": "Verilog",
+                "renderer": "hdl_verilog",
+                "ext": "v",
+                "code_instruct": "The code should be for a single module.",
+                "stats_limits": {"max_node": "all", "max_thresh": 15, "min_node": "sum", "min_thresh": 1}
+            },
+            "yosys": {
+                "language": "yosys JSON netlist",
+                "renderer": "hdl_yosys",
+                "ext": "json",
+                "code_instruct": "The netlist should have defined ports containing direction and bits array and defined cells containing type, parameters, port_directions and connections. The code should start with '''{\n  \"modules\": {\n'''."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": ["Manufacturing", "Blockchain", "Nanotechnology", "Telecommunications", "Electronics", "Computer Science", "Automation Technology","Photography"],
+            "contrary_personas": [
+                "mol",
+                "tree",
+                "dna",
+                "chess",
+                "music",
+                "sequence",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "sequence",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "logic": {
+        "name": "propositional logic",
+        "group": "domain-specific",
+        "terms_semantic": [
+            "logic gate",
+            "logical operator",
+            "digital circuit",
+            "digital logic",
+            "digital system",
+            "logic circuit",
+            "symbolic logic",
+            "boolean algebra",
+            "boolean expression",
+            "boolean logic",
+            "truth table",
+            "formal logic",
+            "combinational logic",
+            "combinational circuit",
+            "logical connective"
+        ],
+        "search_queries": [
+            "A study of propositional logic involving logical operators, truth tables, and symbolic logic in the context of digital systems and formal logic.",
+            "Electrical Engineer designing combinational circuits using logic gates, boolean expressions, and logical connectives based on principles of propositional logic and digital logic.",
+            "Mathematicaian analyzing and simplifying boolean algebra and boolean logic in digital circuits through truth tables, logical operators, and combinational logic design.",
+            "University professor for digital systems who teaches boolean algebra and boolean logic in digital circuits through truth tables, logical expressions, logical connective symbols and combinational logic design.",
+            "logic gate, logical operator, digital circuit, digital logic, digital system, logic circuit, symbolic logic, boolean algebra, boolean expression, boolean logic, truth table, formal logic, combinational logic, combinational circuit, logical connective"
+        ],
+        "language": {
+            "logic_bool": {
+                "language": "boolean logic expressions",
+                "renderer": "logic",
+                "ext": "txt",
+                "code_instruct": "The expressions should use operators ('and', 'or', 'nand', 'nor', 'xor', 'xnor', 'not') in one single formula without '=' and, IMPORTANTLY, the code should consist of only one single line and the operators should be between the variables/parentheses, not at the beginning.",
+                "stats_limits": {"max_node": "all", "max_thresh": 12, "min_node": "sum", "min_thresh": 1}
+            },
+            "logic_symb": {
+                "language": "logical connective symbols",
+                "renderer": "logic",
+                "ext": "txt",
+                "code_instruct": "The symbols ('¬', '∧', '∨', '⊻') should be in one single formula without '=' and, IMPORTANTLY, the code should consist of only one single line."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": ["Mathematics", "Manufacturing", "Blockchain", "Nanotechnology", "Telecommunications", "Electronics", "Computer Science", "Automation Technology", "Photography", "Statistics"],
+            "contrary_personas": [
+                "mol",
+                "tree",
+                "dna",
+                "chess",
+                "music",
+                "class",
+                "sequence",
+                "component",
+                "state",
+                "bpmn",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "component",
+                "bpmn",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "plc": {
+        "name": "programmable logic controller (PLC)",
+        "group": "domain-specific",
+        "terms_semantic": [
+            "programmable logic controller (PLC)",
+            "ladder logic diagram (LD)",
+            "function block diagram (FBD)",
+            "structured text (ST)",
+            "instruction list (IL)",
+            "sequential function charts (SFC)",
+            "industrial control",
+            "industrial automation",
+            "factory automation",
+            "control engineering",
+            "control system",
+            "automation design",
+            "IEC 61131",
+            "OPC UA",
+            "AutomationML",
+            "CODESYS"
+        ],
+        "search_queries": [
+            "A control engineer working with programmable logic controller (PLC) systems who uses ladder logic diagram (LD), function block diagram (FBD), structured text (ST), instruction list (IL), and sequential function charts (SFC) for industrial control and automation design in compliance with IEC 61131 standards, integrating OPC UA and AutomationML for factory automation and control engineering applications.",
+            "Electrical Engineer specializing in industrial automation and control systems, utilizing programmable logic controller (PLC) programming languages including structured text (ST), ladder logic diagram (LD), and function block diagram (FBD), with experience in CODESYS, OPC UA communication, and AutomationML for automation design in manufacturing environments.",
+            "Expert in control engineering and industrial control systems who develops and implements PLC-based automation solutions using IEC 61131-3 programming methods such as instruction list (IL), sequential function charts (SFC), and CODESYS platform, supporting factory automation through integration of OPC UA and AutomationML standards.",
+            "University professor for control engineering who teaches industrial automation systems using programmable logic controller (PLC) programming languages including structured text (ST), ladder logic diagram (LD), and function block diagram (FBD).",
+            "programmable logic controller (PLC), ladder logic diagram (LD), function block diagram (FBD), structured text (ST), instruction list (IL), sequential function charts (SFC), industrial control, industrial automation, factory automation, control engineering, control system, automation design, IEC 61131, OPC UA, AutomationML, CODESYS"
+        ],
+        "language": {
+            "il": {
+                "language": "Instruction List (IL)",
+                "renderer": "plc_il",
+                "ext": "txt",
+                "code_instruct": "The code should contain variable definitions and only the commands LD, LDN, AND, OR, XOR, ANDN, ORN, XORN, NOT, ST, STN, S or R and no jump or math commands should be used. The code should start with '''VAR\n    '''."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [],
+            "contrary_categories": []
+        }
+    },
+    "quantum": {
+        "name": "quantum circuit",
+        "group": "domain-specific",
+        "terms_semantic": [
+            "quantum circuit",
+            "superposition",
+            "entanglement",
+            "Qubit",
+            "gate array",
+            "superconducting",
+            "QASM",
+            "Cirq",
+            "QCircuit",
+            "Qiskit"
+        ],
+        "search_queries": [
+            "A description of a quantum circuit involving qubits, superposition, and entanglement using frameworks like Qiskit, Cirq, and QASM with gate array design in superconducting systems.",
+            "Electrical Engineer designing quantum circuits using Qiskit and Cirq, leveraging superposition and entanglement in superconducting qubits, and writing quantum programs in QASM and QCircuit.",
+            "Physicist experienced in implementing quantum circuits through gate array architectures, utilizing superposition and entanglement principles, and working with tools like QASM, Cirq, Qiskit, and QCircuit on superconducting qubit platforms.",
+            "University professor for physics and electrical engineering who teaches quantum circuit design involving qubits and gate array architectures using frameworks like Qiskit, Cirq, and QASM.",
+            "quantum circuit, superposition, entanglement, Qubit, gate array, superconducting, QASM, Cirq, QCircuit, Qiskit"
+        ],
+        "language": {
+            "qasm": {
+                "language": "OpenQASM 2",
+                "renderer": "quantum_qasm2",
+                "ext": "txt",
+                "code_instruct": "",
+                "stats_limits": {"max_node": "all", "max_thresh": 12, "min_node": "sum", "min_thresh": 1}
+            },
+            "quirk": {
+                "language": "Quirk JSON",
+                "renderer": "quantum_quirk",
+                "ext": "json",
+                "code_instruct": "The code should start with '''{\n  \"cols\": [\n'''."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": ["Blockchain", "Mathematics", "Nanotechnology", "Artificial Intelligence", "Telecommunications", "Electronics", "Computer Science", "Physics", "Nuclear", "Automation Technology", "Materials Science", "Statistics", "Optics", "Cybersecurity"],
+            "contrary_personas": [
+                "mol",
+                "tree",
+                "dna",
+                "chess",
+                "music",
+                "state",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "state",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "tree": {
+        "name": "phylogenetic tree",
+        "group": "domain-specific",
+        "terms_semantic": [
+            "phylogenetic tree",
+            "paleontology",
+            "herpetology",
+            "entomology",
+            "ornithology",
+            "horticulture",
+            "ichthyology",
+            "evolutionary biology",
+            "plant biology",
+            "mycology",
+            "cladistics",
+            "cladogram",
+            "common ancestor",
+            "species",
+            "ancestral"
+        ],
+        "search_queries": [
+            "A phylogenetic tree is used in evolutionary biology to represent the evolutionary relationships among species, showing common ancestry and divergence across fields like paleontology, herpetology, entomology, ornithology, ichthyology, plant biology, mycology, and horticulture through the application of cladistics and cladograms.",
+            "Researcher specialized in cladistics who constructs phylogenetic trees and cladograms to study ancestral relationships across species in horticulture, ornithology, and evolutionary biology.",
+            "Analyzing species evolution through phylogenetic trees and cladograms based on shared common ancestors, utilizing methods from cladistics and research in evolutionary biology, paleontology, and organismal studies including plant biology, horticulture, and various zoological disciplines.",
+            "University professor for evolutionary theory and biology teaching phylogenetic trees and cladograms for species in fields like ornithology, ichthyology, paleontology, herpetology, and entomology.",
+            "phylogenetic tree, paleontology, herpetology, entomology, ornithology, horticulture, ichthyology, evolutionary biology, plant biology, mycology, cladistics, cladogram, common ancestor, species, ancestral"
+        ],
+        "language": {
+            "newick": {
+                "language": "Newick",
+                "renderer": "bio_newick",
+                "ext": "txt",
+                "code_instruct": "The code should start with '(' and, IMPORTANTLY, the code should consist of only one single line.",
+                "stats_limits": {"max_node": "leaf nodes", "max_thresh": 25, "min_node": "leaf nodes", "min_thresh": 2}
+            },
+            "phyloxml": {
+                "language": "PhyloXML",
+                "renderer": "bio_phyloxml",
+                "ext": "xml",
+                "code_instruct": "The code should start with '''<phyloxml xmlns=\"http://www.phyloxml.org\">\n  <phylogeny rooted=\"true\">\n    <clade>'''."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": ["Evolutionary Biology", "Healthcare", "Wildlife Conservation", "Environmental Science", "Diseases", "Archaeology", "Agriculture", "Astronomy", "Biology", "Earth Science", "Biomedical Research", "Wildlife Biology", "Woodworking", "Sustainability", "Medicine", "Food", "Animals", "Geology"],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "neural",
+                "chess",
+                "music",
+                "class",
+                "bpmn",
+                "sql",
+                "mind",
+                "kg"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "class",
+                "bpmn",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "dna": {
+        "name": "DNA sequence",
+        "group": "domain-specific",
+        "terms_semantic": [
+            "deoxyribonucleic acid (DNA)",
+            "ribonucleic acid (RNA)",
+            "genetic",
+            "nucleotide",
+            "genome",
+            "base pair",
+            "base sequence",
+            "gene expression",
+            "mutations",
+            "ViennaRNA",
+            "Dot-bracket notation",
+            "FASTA sequence",
+            "Biopython"
+        ],
+        "search_queries": [
+            "Deoxyribonucleic acid (DNA) and ribonucleic acid (RNA) are central to genetic information storage and transfer, involving nucleotide sequences, base pairing, genome structure, and gene expression, with analysis tools like ViennaRNA using Dot-bracket notation and FASTA format processed via Biopython to study mutations and base sequences.",
+            "Biological researcher who uses FASTA sequences, Biopython, and ViennaRNA for genome sequencing, base pair alignment, gene expression patterns, and mutation detection, with expertise in Dot-bracket notation for RNA secondary structure prediction.",
+            "Biologist as a proficient in handling genetic data with expertise in nucleotide sequence analysis, genome annotation, detecting mutations, interpreting base sequences, and utilizing ViennaRNA with Dot-bracket notation for RNA secondary structure prediction, alongside processing FASTA sequences using Biopython for gene expression studies.",
+            "University professor for biology teaching genetics involving nucleotide sequences of Deoxyribonucleic acid (DNA) and ribonucleic acid (RNA) using FASTA sequences, Biopython, and ViennaRNA for gene expressions.",
+            "deoxyribonucleic acid (DNA), ribonucleic acid (RNA), genetic, nucleotide, genome, base pair, base sequence, gene expression, mutations, ViennaRNA, Dot-bracket notation, FASTA sequence, Biopython"
+        ],
+        "language": {
+            "fasta": {
+                "language": "FASTA",
+                "renderer": "bio_fasta",
+                "ext": "txt",
+                "code_instruct": "The code should contain a single FASTA sequence or multiple different sequences of same length (length less than 30). The code should start with '>'.",
+                "stats_limits": {"max_node": "sum", "max_thresh": 40, "min_node": "sum", "min_thresh": 3}
+            },
+            "vienna": {
+                "language": "Vienna RNA dot-bracket notation",
+                "renderer": "bio_vienna",
+                "ext": "txt",
+                "code_instruct": "The code should be in Vienna RNA format for secondary structures containing a sequence and corresponding dot-bracket notation with length less than 100. The dot-bracket notation should be on the line after the sequence and, importantly, be exactly the same length as the sequence. The code should start with '>'.",
+                "stats_limits": {"max_node": "sum", "max_thresh": 100, "min_node": "sum", "min_thresh": 5}
+            }
+        },
+        "benchmark": {
+            "exclude_domains": ["Evolutionary Biology", "Healthcare", "Wildlife Conservation", "Environmental Science", "Diseases", "Archaeology", "Agriculture", "Astronomy", "Biology", "Earth Science", "Biomedical Research", "Wildlife Biology", "Woodworking", "Sustainability", "Medicine", "Food", "Animals", "Geology"],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "neural",
+                "chess",
+                "music",
+                "sequence",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "neural",
+                "chess",
+                "music",
+                "sequence",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "mol": {
+        "name": "molecule or chemical structure",
+        "group": "domain-specific",
+        "terms_semantic": [
+            "molecules",
+            "chemical structure",
+            "atomic",
+            "chemist",
+            "lewis structure",
+            "crystal structure",
+            "structural formula",
+            "reaction mechanisms",
+            "Simplified Molecular Input Line Entry System (SMILES)",
+            "SMARTS",
+            "Molfile",
+            "Protein Data Bank (PDB)",
+            "RDKit"
+        ],
+        "search_queries": [
+            "Using computational cheminformatics tools like RDKit to interpret molecular data formats including SMILES, SMARTS, Molfile, and PDB for analyzing reaction mechanisms, atomic interactions, and the chemical structure of molecules.",
+            "Chemical reasearcher who specializes in interpreting atomic-level details of molecules, including Lewis structures, crystal structures, and reaction mechanisms.",
+            "Chemist working with molecular representations such as Lewis structure, crystal structure, structural formula, and using SMILES, SMARTS, Molfile, PDB, and RDKit to study reaction mechanisms and atomic-level chemical structure.",
+            "University professor for chemistry teaching molecular and atomic structures, such as Lewis structures, crystal structures, and reaction mechanisms using data formats including SMILES and SMARTS.",
+            "molecules, chemical structure, atomic, chemist, lewis structure, crystal structure, structural formula, reaction mechanisms, Simplified Molecular Input Line Entry System (SMILES), SMARTS, Molfile, Protein Data Bank (PDB), RDKit"
+        ],
+        "language": {
+            "smiles": {
+                "language": "SMILES",
+                "renderer": "chem_smiles",
+                "ext": "txt",
+                "code_instruct": "The code should be in SMILES with multiple elements and, IMPORTANTLY, the code should consist of only one single line.",
+                "stats_limits": {"max_node": null, "max_thresh": null, "min_node": "len", "min_thresh": 2}
+            },
+            "smarts": {
+                "language": "SMARTS",
+                "renderer": "chem_smarts",
+                "ext": "txt",
+                "code_instruct": "The code should be in SMARTS with multiple elements and, IMPORTANTLY, the code should consist of only one single line."
+            },
+            "smarts_react": {
+                "language": "SMARTS for chemical reactions",
+                "renderer": "chem_smarts_reaction",
+                "ext": "txt",
+                "code_instruct": "The code should contain '>>' for separating reactants and products in the reaction. IMPORTANTLY, the code should consist of only one single line.",
+                "stats_limits": {"max_node": null, "max_thresh": null, "min_node": "len", "min_thresh": 14}
+            },
+            "pdb": {
+                "language": "Protein Data Bank (PDB) format",
+                "renderer": "chem_pdb",
+                "ext": "txt",
+                "code_instruct": ""
+            },
+            "cml": {
+                "language": "Chemical Markup Language (CML)",
+                "renderer": "chem_cml",
+                "ext": "cml",
+                "code_instruct": "The code should start with '''<cml xmlns=\"http://www.xml-cml.org/schema\"'''."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": ["Evolutionary Biology", "Healthcare", "Wildlife Conservation", "Environmental Science", "Diseases", "Archaeology", "Agriculture", "Astronomy", "Biology", "Earth Science", "Biomedical Research", "Wildlife Biology", "Woodworking", "Sustainability", "Medicine", "Food", "Materials Science"],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "neural",
+                "chess",
+                "music",
+                "component",
+                "bpmn",
+                "sql",
+                "mind",
+                "kg"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "component",
+                "bpmn",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "biopath": {
+        "name": "biological/metabolic pathway diagram",
+        "group": "domain-specific",
+        "terms_semantic": [
+            "metabolism",
+            "endocrinology",
+            "nutritionist",
+            "biological pathway diagram",
+            "pathway database",
+            "enzyme path",
+            "biochemical networks",
+            "KEGG database",
+            "biosynthetic",
+            "gene regulatory",
+            "systems biology graphical notation (SBGN)",
+            "systems biology markup language (SBML)",
+            "biological pathway exchange (BioPAX)"
+        ],
+        "search_queries": [
+            "A comprehensive biological pathway diagram integrating metabolism, biosynthetic processes, and gene regulatory networks using standards like SBGN, SBML, and BioPAX for systems biology analysis.",
+            "Nutritionist examining metabolic and endocrinology-related pathways through a biochemical network visualized with SBGN notation and sourced from a pathway database such as KEGG.",
+            "Biological researcher with focus on enzyme path mapping in metabolic and biosynthetic pathways supported by pathway databases using SBML and BioPAX formats for modeling in systems biology and endocrinology research.",
+            "University professor for biochemistry and nutrition science teaching metabolic pathway diagrams, enzyme interactions, and biosynthetic processes using standards like SBGN, SBML, and BioPAX.",
+            "metabolism, endocrinology, nutritionist, biological pathway diagram, pathway database, enzyme path, biochemical networks, KEGG database, biosynthetic, gene regulatory, systems biology graphical notation (SBGN), systems biology markup language (SBML), biological pathway exchange (BioPAX)"
+        ],
+        "language": {
+            "path_sbml": {
+                "language": "Systems Biology Markup Language (SBML)",
+                "renderer": "bio_sbml",
+                "ext": "sbml",
+                "code_instruct": "The code should start with '''<sbml xmlns=\"http://www.sbml.org/sbml/level2\" level=\"2\" version=\"1\">\n'''."
+            },
+            "path_pax": {
+                "language": "Biological Pathway Exchange (BioPAX)",
+                "renderer": "kg_xml",
+                "ext": "owl",
+                "code_instruct": "The code should be in .owl XML and start with '''<rdf:RDF xmlns:bp=\"http://www.biopax.org/release/biopax-level3.owl#\"         xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"'''."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [],
+            "contrary_categories": []
+        }
+    },
+    "neural": {
+        "name": "neural network or deep learning model",
+        "group": "domain-specific",
+        "terms_semantic": [
+            "AI researcher",
+            "neural networks",
+            "deep-learning",
+            "machine-learning",
+            "AI model",
+            "AI architect",
+            "tensor diagrams",
+            "convolutional neural network (CNN)",
+            "recurrent neural network (RNN)",
+            "PyTorch",
+            "TensorFlow",
+            "Keras",
+            "backpropagation",
+            "activation function",
+            "ONNX"
+        ],
+        "search_queries": [
+            "Artificial intelligence (AI) researcher designing and optimizing deep-learning models using neural networks, backpropagation, and activation functions within machine-learning frameworks like TensorFlow, PyTorch, and Keras, with support for ONNX and visualization through tensor diagrams.",
+            "AI architect developing AI models with convolutional neural network (CNN) and recurrent neural network (RNN) architectures, leveraging deep-learning techniques in PyTorch and TensorFlow for scalable machine-learning solutions.",
+            "Machine learning engineer skilled in building and training neural networks using backpropagation, activation functions, and tensor diagrams, with expertise in CNNs, RNNs, and deep-learning frameworks such as Keras, TensorFlow, and ONNX for advanced AI model development.",
+            "University professor for artificial intelligence teaching architectures of deep learning neural networks tackling backpropagation, activation functions, CNNs, and RNNs within machine-learning frameworks like TensorFlow, PyTorch, and Keras.",
+            "AI researcher, neural networks, deep-learning, machine-learning, AI model, AI architect, tensor diagrams, convolutional neural network (CNN), recurrent neural network (RNN), PyTorch, TensorFlow, Keras, backpropagation, activation function, ONNX"
+        ],
+        "language": {
+            "nn_onnx_graph": {
+                "language": "ONNX Graph Syntax",
+                "renderer": "nn_onnx",
+                "ext": "onnx",
+                "code_instruct": "The code should not be in XML and without '[' or ']'. The code should start with '''ir_version: 7\nproducer_name: 'onnx'\ngraph {\n  node {'''.",
+                "stats_limits": {"max_node": "sum", "max_thresh": 16, "min_node": "sum", "min_thresh": 3}
+            },
+            "nn_keras": {
+                "language": "Keras model configuration .json",
+                "renderer": "nn_keras",
+                "ext": "json",
+                "code_instruct": "The code should start with '''{\n    \"module\": \"keras.src\",\n    \"class_name\": \"<class name>\",\n    \"config\": {\n        \"name\": \"<config name>\",\n        \"layers\": ['''.",
+                "stats_limits": {"max_node": "sum", "max_thresh": 14, "min_node": "sum", "min_thresh": 2}
+            },
+            "nn_proto": {
+                "language": "ProtoBuf Text Format .pbtxt",
+                "renderer": "nn_protobuf",
+                "ext": "pbtxt",
+                "code_instruct": ""
+            }
+        },
+        "benchmark": {
+            "exclude_domains": ["Mathematics", "Blockchain", "Neuroscience", "Artificial Intelligence", "Music", "Language", "Computer Science", "Automation Technology", "Photography", "Statistics", "Cybersecurity"],
+            "contrary_personas": [
+                "circuit",
+                "mol",
+                "tree",
+                "dna",
+                "chess",
+                "music",
+                "state",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "chess",
+                "music",
+                "state",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "chess": {
+        "name": "board position of a chess game",
+        "group": "domain-specific",
+        "terms_semantic": [
+            "chess game",
+            "chess board",
+            "board game",
+            "checkmate",
+            "pawn structure",
+            "grandmaster",
+            "puzzle",
+            "tournament",
+            "Forsyth–Edwards notation (FEN)",
+            "portable game notation (PGN)"
+        ],
+        "search_queries": [
+            "Skillful interpretation of a chess game's current board position requires knowledge of checkmate patterns, pawn structure dynamics, and notation systems like PGN and FEN, especially during tournament play or puzzle solving.",
+            "Statistican understanding the board position in a chess game involves analyzing elements like pawn structure, piece placement, and potential for checkmate, often studied through FEN and PGN in tournaments or puzzles.",
+            "Grandmaster analysis of a chess board position typically includes evaluating pawn structure and tactical opportunities, recorded using Forsyth–Edwards Notation (FEN) and Portable Game Notation (PGN) from high-level board games.",
+            "University professor of chess theory teaching openings, middlegame strategies, and endgame techniques while analyzing decision-making, pattern recognition, and tournament play.",
+            "chess game, chess board, board game, checkmate, pawn structure, grandmaster, puzzle, tournament, Forsyth–Edwards notation (FEN), portable game notation (PGN)"
+        ],
+        "language": {
+            "fen": {
+                "language": "Forsyth-Edwards Notation (FEN)",
+                "renderer": "chess_fen",
+                "ext": "txt",
+                "code_instruct": "IMPORTANTLY, the code should consist of only one single line.",
+                "stats_limits": {"max_node": "sum", "max_thresh": 32, "min_node": "sum", "min_thresh": 1}
+            },
+            "pgn": {
+                "language": "Portable Game Notation (PGN)",
+                "renderer": "chess_pgn",
+                "ext": "txt",
+                "code_instruct": "The code should not contain FEN."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": ["Mathematics", "Neuroscience", "Sports", "Adventure", "Statistics", "Culture", "Arts and Crafts"],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "music",
+                "class",
+                "bpmn",
+                "sql",
+                "kg"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "music",
+                "class",
+                "bpmn",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "music": {
+        "name": "musical notation",
+        "group": "domain-specific",
+        "terms_semantic": [
+            "music",
+            "time signature",
+            "chord",
+            "melody",
+            "harmony",
+            "musical score reading",
+            "composition notation",
+            "audio",
+            "sound",
+            "orchestra",
+            "vinyl",
+            "LilyPond",
+            "ABC notation"
+        ],
+        "search_queries": [
+            "A comprehensive guide to understanding musical notation including music elements like time signature, chord, melody, and harmony, as well as reading a musical score and using composition notation systems such as LilyPond and ABC notation.",
+            "Music enthusiast who can read musical score, interpret time signatures and chords, and uses tools like LilyPond and ABC notation to transcribe melody and harmony for orchestral compositions shared via audio, sound recordings, or vinyl.",
+            "Music composer skilled in music theory and composition notation with expertise in analyzing harmony, melody, and chord structures, reading musical scores, applying correct time signatures, and utilizing digital and traditional formats like LilyPond, ABC notation, and vinyl for audio and sound reproduction in orchestra settings.",
+            "Music teacher or professor teaching composition, harmony, rhythm, and performance across classical, jazz, and contemporary traditions with emphasis on theory and expression.",
+            "music, time signature, chord, melody, harmony, musical score reading, composition notation, audio, sound, orchestra, vinyl, LilyPond, ABC notation"
+        ],
+        "language": {
+            "abc": {
+                "language": "ABC notation",
+                "renderer": "music_abc",
+                "ext": "abc",
+                "code_instruct": "The code should start with 'X:'.",
+                "stats_limits": {"max_node": "sum", "max_thresh": 80, "min_node": "sum", "min_thresh": 3}
+            },
+            "lilypond": {
+                "language": "LilyPond file format",
+                "renderer": "music_lilypond",
+                "ext": "ly",
+                "code_instruct": ""
+            },
+            "xml": {
+                "language": "MusicXML",
+                "renderer": "music_xml",
+                "ext": "xml",
+                "code_instruct": "The code should start with '''<score-partwise version=\"3.1\">\n  <part-list>\n    <score-part id='''."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": ["Music", "Language", "Literacy", "Philosophy", "Culture", "Arts and Crafts", "Religion", "Linguistics", "Psychology", "Education", "Dance", "Electronics", "Teaching"],
+            "contrary_personas": [
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "sequence",
+                "gantt",
+                "sql",
+                "kg"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "sequence",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "class": {
+        "name": "unified modeling language (UML) class diagram",
+        "group": "modeling",
+        "terms_semantic": [
+            "software architect",
+            "unified modeling language (UML)",
+            "use case model",
+            "software modeling",
+            "object-oriented model",
+            "systems modeling language (SysML)",
+            "software design",
+            "functional architecture",
+            "document software",
+            "class diagram",
+            "sequence diagram",
+            "use case diagram",
+            "activity diagram",
+            "component diagram",
+            "model-driven development"
+        ],
+        "search_queries": [
+            "A software architect uses unified modeling language (UML) and systems modeling language (SysML) for software modeling, including class diagrams, sequence diagrams, and use case diagrams to support model-driven development and document software design.",
+            "Software engineer designing functional architecture with unified modeling language (UML) class diagrams, use case models, and activity diagrams as part of an object-oriented model and component diagram structure.",
+            "Professionals applying software design techniques through unified modeling language (UML) class diagrams, use case diagrams, and sequence diagrams to support systems modeling, model-driven development, and comprehensive documentation of software systems.",
+            "University professor of software engineering teaching Unified Modeling Language for system design through use-case, class, sequence, and activity diagrams to model complex architectures.",
+            "software architect, unified modeling language (UML), use case model, software modeling, object-oriented model, systems modeling language (SysML), software design, functional architecture, document software, class diagram, sequence diagram, use case diagram, activity diagram, component diagram, model-driven development"
+        ],
+        "language": {
+            "puml": {
+                "language": "PlantUML",
+                "renderer": "model_plantuml",
+                "ext": "puml",
+                "code_instruct": "The code should consider the relationship directions within the diagram and start with '@startuml\n'.",
+                "stats_limits": {"max_node": "classes", "max_thresh": 15, "min_node": "classes", "min_thresh": 1}
+            },
+            "mermaid": {
+                "language": "Mermaid",
+                "renderer": "model_mermaid",
+                "ext": "mmd",
+                "code_instruct": "The code should consider the relationship directions within the diagram and start with 'classDiagram\n'."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "bpmn",
+                "gantt"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "sequence",
+                "component",
+                "state",
+                "bpmn",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "sequence": {
+        "name": "unified modeling language (UML) sequence diagram",
+        "group": "modeling",
+        "search_queries": [],
+        "language": {
+            "puml": {
+                "language": "PlantUML",
+                "renderer": "model_plantuml",
+                "ext": "puml",
+                "code_instruct": "The code should consider the relationship directions within the diagram and start with '@startuml\n'.",
+                "stats_limits": {"max_node": "messages", "max_thresh": 20, "min_node": "messages", "min_thresh": 1}
+            },
+            "mermaid": {
+                "language": "Mermaid",
+                "renderer": "model_mermaid",
+                "ext": "mmd",
+                "code_instruct": "The code should consider the relationship directions within the diagram and start with 'sequenceDiagram\n'."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "bpmn",
+                "gantt"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "class",
+                "component",
+                "state",
+                "bpmn",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "activity": {
+        "name": "unified modeling language (UML) activity diagram",
+        "group": "modeling",
+        "search_queries": [],
+        "language": {
+            "puml": {
+                "language": "PlantUML",
+                "renderer": "model_plantuml",
+                "ext": "puml",
+                "code_instruct": "The code should not contain 'goto' statements, consider the relationship directions within the diagram and start with '@startuml\n'."
+            },
+            "mermaid": {
+                "language": "Mermaid Flowchart",
+                "renderer": "model_mermaid",
+                "ext": "mmd",
+                "code_instruct": "The code should consider the relationship directions within the diagram and start with 'flowchart TD\n    ' or 'flowchart LR\n    '."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [],
+            "contrary_categories": []
+        }
+    },
+    "component": {
+        "name": "unified modeling language (UML) component diagram",
+        "group": "modeling",
+        "search_queries": [],
+        "language": {
+            "puml": {
+                "language": "PlantUML",
+                "renderer": "model_plantuml",
+                "ext": "puml",
+                "code_instruct": "The code should consider the relationship directions within the diagram and start with '@startuml\n'."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "bpmn",
+                "gantt"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "class",
+                "sequence",
+                "state",
+                "bpmn",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "usecase": {
+        "name": "unified modeling language (UML) usecase diagram",
+        "group": "modeling",
+        "search_queries": [],
+        "language": {
+            "puml": {
+                "language": "PlantUML",
+                "renderer": "model_plantuml",
+                "ext": "puml",
+                "code_instruct": "The code should consider the relationship directions within the diagram and start with '@startuml\n'."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [],
+            "contrary_categories": []
+        }
+    },
+    "state": {
+        "name": "state chart",
+        "group": "modeling",
+        "search_queries": [],
+        "language": {
+            "puml": {
+                "language": "PlantUML State Diagram",
+                "renderer": "model_plantuml",
+                "ext": "puml",
+                "code_instruct": "The code should start with '@startuml\n'."
+            },
+            "mermaid": {
+                "language": "Mermaid State Diagram",
+                "renderer": "model_mermaid",
+                "ext": "mmd",
+                "code_instruct": "The code should start with 'stateDiagram\n    ' or 'stateDiagram-v2\n    '."
+            },
+            "scxml": {
+                "language": "State Chart extensible Markup Language (SCXML)",
+                "renderer": "state_scxml",
+                "ext": "xml",
+                "code_instruct": "The code should start with '<scxml xmlns=\"http://www.w3.org/2005/07/scxml\" '."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "class",
+                "sequence",
+                "component",
+                "bpmn",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "requirement": {
+        "name": "system modeling language (SysML) requirement diagram",
+        "group": "modeling",
+        "terms_semantic": [
+            "requirements engineer",
+            "systems modeling language (SysML)",
+            "systems architect",
+            "software design",
+            "requirement model",
+            "requirement trace",
+            "requirement diagram",
+            "functional architecture",
+            "functional requirement", 
+            "physical requirement"
+        ],
+        "search_queries": [
+            "Modeling requirement traces and system requirements in a requirement diagram using systems modeling language (SysML) for effective software design and functional architecture development.",
+            "System engineer creating a comprehensive requirement model using systems modeling language (SysML) to support functional architecture and software design through structured requirement diagrams and traceability.",
+            "Requirements engineer or systems architect creating a SysML requirement diagram to establish clear requirement trace and align software design with functional architecture.",
+            "University professor of software engineering teaching requirements elicitation, specification, validation, and management using techniques like use cases, user stories, and formal models.",
+            "requirements engineer, systems modeling language (SysML), systems architect, software design, requirement model, requirement trace, requirement diagram, functional architecture, functional requirement, physical requirement"
+        ],
+        "language": {
+            "mermaid": {
+                "language": "Mermaid",
+                "renderer": "model_mermaid",
+                "ext": "mmd",
+                "code_instruct": "The code should consider the relationship directions within the diagram and start with 'requirementDiagram\n\n'."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [],
+            "contrary_categories": []
+        }
+    },
+    "bpmn": {
+        "name": "business process or workflow",
+        "group": "modeling",
+        "terms_semantic": [
+            "business process model and notation (BPMN)",
+            "business developer",
+            "project manager",
+            "enterprise architect",
+            "administrative assistant",
+            "business model",
+            "business logic",
+            "business rule",
+            "business analysis",
+            "business administration",
+            "process model",
+            "visual communication",
+            "process documentation",
+            "flowchart",
+            "concept maps",
+            "process diagram",
+            "swimlane diagram",
+            "enterprise workflow",
+            "operations research analysis",
+            "management consulting",
+            "decision management",
+            "cooperative development",
+            "operational decision"
+        ],
+        "search_queries": [
+            "A comprehensive approach to modeling and optimizing business processes using tools like BPMN, process diagrams, and flowcharts, integrating business logic, rules, and operational decisions within enterprise workflows and supported by process documentation and visual communication techniques.",
+            "Business developer, project manager, enterprise architect, and administrative assistant collaborating through cooperative development and management consulting to align business administration, business analysis, and decision management using concept maps, swimlane diagrams, and business process model and notation (BPMN).",
+            "Professionals applying operations research analysis and enterprise architecture to design, document, and improve business models and process models by leveraging BPMN, decision management, and process documentation for effective operational decision-making and workflow visualization.",
+            "University professor of business process management teaching enterprise workflow analysis, process modeling, optimization, and automation with methodologies like BPMN, flowcharts and decision diagrams.",
+            "business process model and notation (BPMN), business developer, project manager, enterprise architect, administrative assistant, business model, business logic, business rule, business analysis, business administration, process model, visual communication, process documentation, flowchart, concept maps, process diagram, swimlane diagram, enterprise workflow, operations research analysis, management consulting, decision management, cooperative development, operational decision"
+        ],
+        "language": {
+            "bpmn": {
+                "language": "Business Process Model and Notation (BPMN) XML",
+                "renderer": "biz_bpmn",
+                "ext": "xml",
+                "code_instruct": "The code should should contain bpmndi:BPMNDiagram with consideration of the flowline arrow directions. The code should start with '''<bpmn:definitions xmlns:bpmn=\"http://www.omg.org/spec/BPMN/20100524/MODEL\"\n    xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\"\n    xmlns:dc=\"http://www.omg.org/spec/DD/20100524/DC\"\n    xmlns:di=\"http://www.omg.org/spec/DD/20100524/DI\"\n    id=\"Definitions_1\"\n    targetNamespace=\"http://bpmn.io/schema/bpmn\">'''.",
+                "stats_limits": {"max_node": "sequence_flows", "max_thresh": 30, "min_node": "sequence_flows", "min_thresh": 1}
+            },
+            "puml": {
+                "language": "PlantUML Activity Diagram",
+                "renderer": "model_plantuml",
+                "ext": "puml",
+                "code_instruct": "The code should consider the flowline arrow directions within the diagram and start with '@startuml\n'."
+            },
+            "mermaid": {
+                "language": "Mermaid Flowchart",
+                "renderer": "model_mermaid",
+                "ext": "mmd",
+                "code_instruct": "The code should consider the flowline arrow directions within the diagram and start with 'flowchart TD\n    ' or 'flowchart LR\n    '."
+            },
+            "d2": {
+                "language": "D2 diagram scripting language",
+                "renderer": "model_d2",
+                "ext": "txt",
+                "code_instruct": "The code should consider the flowline arrow directions within the diagram."
+            },
+            "dot": {
+                "language": "DOT (Graphviz)",
+                "renderer": "model_dot",
+                "ext": "dot",
+                "code_instruct": "The code should consider the flowline arrow directions within the diagram."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": ["Ecology", "Urban Planning", "Psychology", "Politics", "Human Resources", "Education","Energy", "Environmental Science", "Finance", "Economics", "Transportation", "Sustainability", "Diversity and Inclusion", "Climate Change", "Aviation", "Logistics", "Teaching", "Cybersecurity", "Culture"],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "class",
+                "sequence",
+                "component",
+                "state",
+                "gantt",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "gantt": {
+        "name": "project schedule as Gantt chart",
+        "group": "modeling",
+        "search_queries": [],
+        "language": {
+            "puml": {
+                "language": "PlantUML",
+                "renderer": "model_plantuml",
+                "ext": "puml",
+                "code_instruct": "The code should start with '@startgantt\n'."
+            },
+            "mermaid": {
+                "language": "Mermaid",
+                "renderer": "model_mermaid",
+                "ext": "mmd",
+                "code_instruct": "The code should start with 'gantt\n    '.",
+                "stats_limits": {"max_node": "time bars", "max_thresh": 35, "min_node": "time bars", "min_thresh": 1}
+            }
+        },
+        "benchmark": {
+            "exclude_domains": ["Ecology", "Urban Planning", "Psychology", "Politics", "Human Resources", "Education","Energy", "Environmental Science", "Finance", "Economics", "Transportation", "Sustainability", "Diversity and Inclusion", "Climate Change", "Aviation", "Logistics", "Teaching", "Cybersecurity", "Culture"],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "class",
+                "sequence",
+                "component",
+                "state",
+                "bpmn",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "sql": {
+        "name": "database entity relationship (ER) diagram",
+        "group": "modeling",
+        "terms_semantic": [
+            "entity relationship (ER) diagram",
+            "database architect",
+            "database schema",
+            "relational database",
+            "database development",
+            "database management",
+            "database design",
+            "database administration",
+            "database maintenance",
+            "structured query language (SQL)",
+            "primary key",
+            "foreign key",
+            "MySQL",
+            "PostgreSQL",
+            "data definition language (DDL)",
+            "database markup language (DBML)"
+        ],
+        "search_queries": [
+            "Design of a database entity relationship (ER) diagram for a relational database using data definition language (DDL) and database markup language (DBML) as part of comprehensive database development and schema modeling.",
+            "Database architect creating an entity relationship (ER) diagram to define primary keys, foreign keys, and table relationships using MySQL and PostgreSQL, while ensuring efficient database design and administration.",
+            "Professionals involved in database management and maintenance using structured query language (SQL) to implement database schema changes based on an entity relationship (ER) diagram in a relational database environment.",
+            "University professor of database systems teaching entity–relationship modeling and schema design for data architectures using data definition language (DDL) and database markup language (DBML).",
+            "entity relationship (ER) diagram, database architect, database schema, relational database, database development, database management, database design, database administration, database maintenance, structured query language (SQL), primary key, foreign key, MySQL, PostgreSQL, data definition language (DDL), database markup language (DBML)"
+        ],
+        "language": {
+            "mermaid": {
+                "language": "Mermaid",
+                "renderer": "model_mermaid",
+                "ext": "mmd",
+                "code_instruct": "The code should start with 'erDiagram\n    '."
+            },
+            "puml": {
+                "language": "PlantUML",
+                "renderer": "model_plantuml",
+                "ext": "puml",
+                "code_instruct": "The code should start with '@startchen\n'."
+            },
+            "sql": {
+                "language": "MySQL data definition language (DDL)",
+                "renderer": "db_mysql",
+                "ext": "txt",
+                "code_instruct": "The code should start with 'CREATE '."
+            },
+            "postgres": {
+                "language": "PostgreSQL data definition language (DDL)",
+                "renderer": "db_postgresql",
+                "ext": "txt",
+                "code_instruct": "The code should start with 'CREATE '."
+            },
+            "dbml": {
+                "language": "Database Markup Language (DBML)",
+                "renderer": "db_dbml",
+                "ext": "txt",
+                "code_instruct": "The code should start with 'Table '.",
+                "stats_limits": {"max_node": "tables", "max_thresh": 13, "min_node": "references", "min_thresh": 1}
+            },
+            "psl": {
+                "language": "Prisma Schema Language (PSL)",
+                "renderer": "db_prisma",
+                "ext": "txt",
+                "code_instruct": "The code should start with 'model '."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "class",
+                "sequence",
+                "component",
+                "state",
+                "bpmn",
+                "gantt",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "mind": {
+        "name": "mind maps",
+        "group": "modeling",
+        "terms_semantic": [
+            "mind map",
+            "concept map",
+            "conceptboard",
+            "concept tree",
+            "idea visualisation",
+            "brainstorming",
+            "creative thinkink",
+            "creative map",
+            "knowledge organization",
+            "visual thinkink",
+            "idea clustering",
+            "thought organization",
+            "note structuring",
+            "visual notes",
+            "communicate ideas",
+            "information design",
+            "digital story",
+            "Markmap",
+            "FreeMind",
+            "Freeplane"
+        ],
+        "search_queries": [
+            "Tools and techniques for idea visualisation using mind maps, concept maps, and knowledge organization strategies to support creative thinking and thought organization.",
+            "Creative thinker looking to use conceptboard, Markmap, or FreeMind for visual notes and idea clustering during brainstorming and digital story creation.",
+            "Professionals leveraging mind map software like Freeplane and concept trees for information design, communicate ideas effectively, and structure notes visually.",
+            "University professor of cognitive sciences teaching mind mapping for idea generation, concept organization, and problem-solving through structured visual knowledge representation.",
+            "mind map, concept map, conceptboard, concept tree, idea visualisation, brainstorming, creative thinkink, creative map, knowledge organization, visual thinkink, idea clustering, thought organization, note structuring, visual notes, communicate ideas, information design, digital story, Markmap, FreeMind, Freeplane"
+        ],
+        "language": {
+            "mermaid": {
+                "language": "Mermaid Mindmap",
+                "renderer": "model_mermaid",
+                "ext": "mmd",
+                "code_instruct": "The code should start with 'mindmap\n'.",
+                "stats_limits": {"max_node": "nodes", "max_thresh": 110, "min_node": "nodes", "min_thresh": 2}
+            },
+            "puml": {
+                "language": "PlantUML MindMap diagram",
+                "renderer": "model_plantuml",
+                "ext": "puml",
+                "code_instruct": "The code should start with '@startmindmap\n'."
+            },
+            "md": {
+                "language": "Markmap .md",
+                "renderer": "model_markmap",
+                "ext": "md",
+                "code_instruct": "The code should start with '#'."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "class",
+                "sequence",
+                "component",
+                "state",
+                "bpmn",
+                "gantt",
+                "sql"
+            ]
+        }
+    },
+    "graph": {
+        "name": "graphs",
+        "group": "modeling",
+        "terms_semantic": [
+            "graph model",
+            "graph editor",
+            "graph drawing",
+            "graph theory",
+            "knowledge graph",
+            "hidden markov model",
+            "node & edge",
+            "entity & relation",
+            "GraphML",
+            "NetworkX"
+        ],
+        "search_queries": [
+            "Expertise in developing graph models using NetworkX and GraphML, with strong skills in graph drawing, entity & relation modeling, and implementing graph editors for knowledge graph construction.",
+            "Mathematician specialized in graph theory and its applications in modeling knowledge graphs using node & edge structures, graph models, and tools like NetworkX and GraphML.",
+            "Data engineer proficient in graph drawing and graph editing, with experience in representing entity & relation data through knowledge graphs and hidden markov models.",
+            "University professor of mathematics teaching graph theory through nodes, edges, connectivity, and algorithms with applications in networks, optimization, and combinatorics.",
+            "graph model, graph editor, graph drawing, graph theory, knowledge graph, hidden markov model, node & edge, entity & relation, GraphML, NetworkX"
+        ],
+        "language": {
+            "graphml": {
+                "language": "GraphML",
+                "renderer": "graph_graphml",
+                "ext": "graphml",
+                "code_instruct": "The code should start with '<graphml xmlns=\"http://graphml.graphdrawing.org/xmlns\"'."
+            },
+            "gml": {
+                "language": "Graph Modelling Language (GML)",
+                "renderer": "graph_gml",
+                "ext": "gml",
+                "code_instruct": "The code should start with 'graph [\n'."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [],
+            "contrary_categories": []
+        }
+    },
+    "kg": {
+        "name": "knowledge graphs",
+        "group": "modeling",
+        "terms_semantic": [
+            "knowledge graph",
+            "knowledge base",
+            "ontology engineer",
+            "semantic",
+            "resource description framework (RDF)",
+            "web ontology language (OWL)",
+            "Wikidata",
+            "DBpedia",
+            "Protégé",
+            "node & edge",
+            "entity & relation",
+            "linked data",
+            "triple store",
+            "NetworkX",
+            "RDFLib"
+        ],
+        "search_queries": [
+            "A comprehensive knowledge graph system that integrates semantic technologies using RDF, OWL, and linked data principles, leveraging knowledge bases like Wikidata and DBpedia, and structured as node & edge representations stored in triple stores.",
+            "Ontology engineer working with Protégé to design semantic models, utilizing resource description framework (RDF) and web ontology language (OWL) to build knowledge bases, and managing entity & relation data through tools like RDFLib and NetworkX.",
+            "Data engineer developing and querying knowledge graphs using triple stores and linked data standards, with expertise in RDF, OWL, and semantic modeling, and practical experience in platforms like Wikidata, DBpedia, and tools such as RDFLib and NetworkX.",
+            "University professor of computer science teaching knowledge graphs through ontologies, semantics, and linked data to structure relationships powering AI search and reasoning.",
+            "knowledge graph, knowledge base, ontology engineer, semantic, resource description framework (RDF), web ontology language (OWL), Wikidata, DBpedia, Protégé, node & edge, entity & relation, linked data, triple store, NetworkX, RDFLib"
+        ],
+        "language": {
+            "rdf_xml": {
+                "language": "RDF XML",
+                "renderer": "kg_xml",
+                "ext": "xml",
+                "code_instruct": "The code should start with '<rdf:RDF '.",
+                "stats_limits": {"max_node": "nodes", "max_thresh": 40, "min_node": "nodes", "min_thresh": 2}
+            },
+            "rdf_ttl": {
+                "language": "RDF Turtle",
+                "renderer": "kg_turtle",
+                "ext": "ttl",
+                "code_instruct": "The code should start with '@prefix'."
+            },
+            "owl_xml": {
+                "language": "OWL XML",
+                "renderer": "kg_xml",
+                "ext": "xml",
+                "code_instruct": "The code should start with '<rdf:RDF '."
+            },
+            "owl_ttl": {
+                "language": "OWL Turtle",
+                "renderer": "kg_turtle",
+                "ext": "ttl",
+                "code_instruct": "The code should start with '@prefix'."
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "class",
+                "sequence",
+                "component",
+                "state",
+                "bpmn",
+                "gantt",
+                "sql"
+            ]
+        }
+    },
+    "chart": {
+        "name": "chart or plot",
+        "group": "modeling",
+        "terms_semantic": [
+            "charts",
+            "plots",
+            "column chart",
+            "bar chart",
+            "line chart",
+            "scatter plot",
+            "pie chart",
+            "histogram",
+            "box plot",
+            "area chart",
+            "venn diagram",
+            "tree map",
+            "spider chart",
+            "radar chart",
+            "diagramming software",
+            "chart creation",
+            "chart interpretion",
+            "data visualization",
+            "time series",
+            "statistical plot",
+            "correlation plot",
+            "distribution plot",
+            "graphical data analysis",
+            "graphical representation",
+            "visual data",
+            "chart design",
+            "infographic",
+            "trend analysis",
+            "matplotlib",
+            "plotly",
+            "vega-lite",
+            "seaborn",
+            "ggplot"
+        ],
+        "search_queries": [
+            "Visual data is represented through charts and statistical plots including bar charts, line charts, scatter plots, pie charts, histograms, box plots, area charts, radar charts, venn diagrams and other infographic-style graphical representations.",
+            "A data analyst persona creating and interpreting charts using diagramming software and libraries like Matplotlib, Plotly, Seaborn, Vega-Lite, and ggplot to perform chart design, graphical data analysis, and trend analysis.",
+            "A university professor in statistics teaching students how to design and interpret charts, plots, and statistical graphics such as histograms, scatter plots, and correlation plots, while also demonstrating tools like ggplot, Seaborn, and Plotly for graphical data analysis.",
+            "A researcher for data visualization specializing in trend analysis and time series charting, developing new methods for infographic design, radar charts, spider charts, and tree maps using advanced diagramming software and libraries like Matplotlib and Vega-Lite.",
+            "charts, plots, column chart, bar chart, line chart, scatter plot, pie chart, histogram, box plot, area chart, venn diagram, tree map, spider chart, radar chart, diagramming software, chart creation, chart interpretion, data visualization, time series, statistical plot, correlation plot, distribution plot, graphical data analysis, graphical representation, visual data, chart design, infographic, trend analysis, matplotlib, plotly, vega-lite, seaborn, ggplot"
+        ],
+        "language": {
+            "plotly": {
+                "language": "Plotly JSON",
+                "renderer": "charts_plotly",
+                "ext": "json",
+                "code_instruct": "The code should start with '''{\n  \"data\": [\n    {\n      \"type\":'''.",
+                "stats_limits": {"max_node": "sum", "max_thresh": 20, "min_node": "sum", "min_thresh": 1}
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "class",
+                "sequence",
+                "component",
+                "state",
+                "sql",
+                "mind",
+                "kg"
+            ]
+        }
+    },
+    "table": {
+        "name": "table",
+        "group": "modeling",
+        "terms_semantic": [
+            "table",
+            "tabular format",
+            "speadsheet",
+            "matrix",
+            "data grid",
+            "row and column",
+            "data entry",
+            "pivot table",
+            "summary table",
+            "comparison table",
+            "histogram",
+            "time serie",
+            "data analysis",
+            "statistics",
+            "structured data",
+            "excel",
+            "dataframe",
+            "pandas"
+        ],
+        "search_queries": [
+            "Structured data is often represented in tables, tabular formats, spreadsheets, and matrices with rows and columns organized in a clear data grid for analysis.",
+            "A business analyst persona working extensively with pivot tables, summary tables, and comparison tables in Excel, DataFrames, and Pandas to conduct data entry, time series tracking, and statistics-driven insights.",
+            "A data science professor working with students to analyze structured data using spreadsheets, matrices, and data grids, teaching pivot tables, summary tables, and tabular formats in Excel and Pandas for applied statistics.",
+            "A researcher for data analytics focusing on transforming raw datasets into tabular summaries and comparison tables, ensuring accuracy in row-and-column structures while applying statistical methods with DataFrames and Python tools.",
+            "table, tabular format, speadsheet, matrix, data grid, row and column, data entry, pivot table, summary table, comparison table, histogram, time serie, data analysis, statistics, structured data, excel, dataframe, pandas"
+        ],
+        "language": {
+            "plotly": {
+                "language": "Plotly JSON",
+                "renderer": "charts_plotly",
+                "ext": "json",
+                "code_instruct": "The code should start with '''{\n  \"data\": [\n    {\n      \"type\": \"table\",'''. The table should have between 3 and 10 rows and between 1 and 10 columns. Do not add buttons or any other interactive elements.",
+                "stats_limits": {"max_node": "sum", "max_thresh": 20, "min_node": "sum", "min_thresh": 4}
+            }
+            
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music"
+            ],
+            "contrary_categories": [
+                "circuit",
+                "hdl",
+                "logic",
+                "quantum",
+                "mol",
+                "tree",
+                "dna",
+                "neural",
+                "chess",
+                "music",
+                "sequence",
+                "component",
+                "state",
+                "mind"
+            ]
+        }
+    },
+    "geo": {
+        "name": "geographical map with specific geospatial information",
+        "group": "modeling",
+        "terms_semantic": [
+            "geography",
+            "geospatial",
+            "cartography",
+            "geo data",
+            "geocoding",
+            "latitude",
+            "longitude",
+            "coordinate system",
+            "spatial analysis",
+            "regional data",
+            "location based",
+            "meteorological data",
+            "climate data",
+            "urban planning",
+            "map",
+            "heatmap",
+            "choropleth map",
+            "topographic map",
+            "thematic map",
+            "Leaflet",
+            "Mapbox",
+            "Google Maps",
+            "OpenStreetMap",
+            "GeoJSON"
+        ],
+        "search_queries": [
+            "Geospatial data and geography are represented through maps, cartography, geocoding, and coordinate systems that include latitude, longitude, spatial analysis, and regional data for location-based insights.",
+            "A geographic information system (GIS) specialist creating heatmaps, choropleth maps, topographic maps and thematic maps using Leaflet, Mapbox, Google Maps, OpenStreetMap, and GeoJSON for urban planning, climate data and meteorological analysis.",
+            "A geography professor teaching cartography and spatial analysis, guiding students in building thematic maps, heatmaps, and choropleth maps using coordinate systems, latitude and longitude, and platforms like Google Maps and Leaflet.",
+            "A climate researcher applying geospatial methods to analyze meteorological data and regional climate patterns, creating maps with Mapbox, GeoJSON, and OpenStreetMap for environmental and urban planning applications.",
+            "geography, geospatial, cartography, geo data, geocoding, latitude, longitude, coordinate system, spatial analysis, regional data, location based, meteorological data, climate data, urban planning, map, heatmap, choropleth map, topographic map, thematic map, Leaflet, Mapbox, Google Maps, OpenStreetMap, GeoJSON"
+        ],
+        "language": {
+            "geojson": {
+                "language": "GeoJSON",
+                "renderer": "charts_geojson",
+                "ext": "json",
+                "code_instruct": "",
+                "stats_limits": {"max_node": null, "max_thresh": null, "min_node": null, "min_thresh": null}
+            },
+            "osm": {
+                "language": "OpenStreetMap (OSM) XML",
+                "renderer": "charts_osm",
+                "ext": "xml",
+                "code_instruct": "",
+                "stats_limits": {"max_node": null, "max_thresh": null, "min_node": null, "min_thresh": null}
+            }
+        },
+        "benchmark": {
+            "exclude_domains": [],
+            "contrary_personas": [],
+            "contrary_categories": []
+        }
+    }
+}

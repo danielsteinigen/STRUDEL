@@ -1,0 +1,29 @@
+engine:
+  model: AIDC-AI/Ovis2-8B
+  trust_remote_code: true
+  max_model_len: 16384
+  max_num_seqs: 256
+  tensor_parallel_size: 1
+  gpu_memory_utilization: 0.95
+  enforce_eager: true
+  limit_mm_per_prompt:
+    image: 1
+    video: 0
+  mm_processor_kwargs:
+    min_pixels: 262144
+    max_pixels: 1048576
+
+sampling:
+  temperature: 0.2
+  top_p: 0.95
+  max_tokens: 16384
+
+generation:
+  request_builder: template_string
+  template: |
+    <|im_start|>system
+    {system}<|im_end|>
+    <|im_start|>user
+    <image>
+    {user}<|im_end|>
+    <|im_start|>assistant

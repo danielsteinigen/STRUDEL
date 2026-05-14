@@ -1,0 +1,15 @@
+engine:
+  model: Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8
+  trust_remote_code: True
+  max_model_len: 16384
+  max_num_seqs: 256
+  tensor_parallel_size: 8
+  enable_expert_parallel: True
+  gpu_memory_utilization: 0.95
+  enforce_eager: True
+
+sampling:
+  temperature: 0.6
+  top_p: 0.95
+  max_tokens: 16384
+

@@ -1,0 +1,25 @@
+engine:
+  model: meta-llama/Llama-4-Scout-17B-16E-Instruct
+  trust_remote_code: true
+  max_model_len: 16384
+  max_num_seqs: 256
+  tensor_parallel_size: 1
+  limit_mm_per_prompt:
+    image: 1
+    video: 0
+
+sampling:
+  temperature: 0.2
+  top_p: 0.95
+  max_tokens: 16384
+
+generation:
+  request_builder: tokenizer_chat_template
+  messages:
+    - role: system
+      content: "{system}"
+    - role: user
+      content:
+        - type: image
+        - type: text
+          text: "{user}"

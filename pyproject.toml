@@ -1,0 +1,64 @@
+[project]
+name = "strudel"
+version = "0.1.0"
+description = "STRUDEL - A Benchmark for Evaluating Vision-Language Models on Structured Diagram Understanding Across Domains."
+keywords = ["benchmark", "structure", "visualization", "formal language", "code2image", "image", "diagram", "rendering", "dataset", "vision-language", "reasoning"]
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Daniel Steinigen", email = "contact@steinigen.me" }
+]
+requires-python = ">=3.12"
+
+[project.urls]
+Homepage = "https://github.com/danielsteinigen/strudel"
+Documentation = "https://github.com/danielsteinigen/strudel#readme"
+Issues = "https://github.com/danielsteinigen/strudel/issues"
+
+[project.scripts]
+strudel = "strudel.cli:main"
+
+
+dependencies = [
+    "pydantic==2.11.3",
+    "transformers",
+    "datasets",
+    "vllm",
+    "qwen-vl-utils",
+    "mistral-common",
+    "wandb==0.21.0",
+]
+
+[project.optional-dependencies]
+datagen = [
+    "faiss-gpu-cu12==1.11.0",
+    "sentence-transformers==5.1.0",
+    "imagehash==4.3.2",
+    "openai==1.76.0",
+    "openai-harmony",
+]
+all = [
+    "faiss-gpu-cu12==1.11.0",
+    "sentence-transformers==5.1.0",
+    "imagehash==4.3.2",
+    "openai==1.76.0",
+    "openai-harmony",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.2,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.black]
+line-length = 140
+target-version = ["py312"]
+extend-exclude = '''
+(
+  ^\.venv
+)
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 140
+skip = [".venv"]

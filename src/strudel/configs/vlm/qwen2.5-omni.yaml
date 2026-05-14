@@ -1,0 +1,27 @@
+engine:
+  model: Qwen/Qwen2.5-Omni-7B
+  trust_remote_code: true
+  max_model_len: 16384
+  max_num_seqs: 256
+  tensor_parallel_size: 1
+  limit_mm_per_prompt:
+    image: 1
+    video: 0
+  mm_processor_kwargs:
+    use_fast: true
+    min_pixels: 50176
+    max_pixels: 802816
+
+sampling:
+  temperature: 0.2
+  top_p: 0.95
+  max_tokens: 16384
+
+generation:
+  request_builder: template_string
+  template: |
+    <|im_start|>system
+    {system}<|im_end|>
+    <|im_start|>user
+    <|vision_bos|><|IMAGE|><|vision_eos|>{user}<|im_end|>
+    <|im_start|>assistant

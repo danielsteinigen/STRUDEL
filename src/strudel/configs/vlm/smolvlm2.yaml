@@ -1,0 +1,21 @@
+engine:
+  model: HuggingFaceTB/SmolVLM2-2.2B-Instruct
+  trust_remote_code: true
+  max_model_len: 16384
+  max_num_seqs: 256
+  tensor_parallel_size: 1
+  limit_mm_per_prompt:
+    image: 1
+    video: 0
+
+sampling:
+  temperature: 0.2
+  top_p: 0.95
+  max_tokens: 16384
+
+generation:
+  request_builder: template_string
+  template: |
+    <|im_start|>User:<image>{system}
+    {user}<end_of_utterance>
+    Assistant:

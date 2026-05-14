@@ -1,0 +1,16 @@
+
+# general dependencies
+pydantic==2.11.3
+transformers
+datasets
+vllm
+qwen-vl-utils
+mistral-common
+wandb==0.21.0
+
+# data generation dependencies
+faiss-gpu-cu12==1.11.0
+sentence-transformers==5.1.0
+imagehash==4.3.2
+openai==1.76.0
+openai-harmony
