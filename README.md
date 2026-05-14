@@ -83,9 +83,8 @@ strudel <group> --help
 | dataset | strudel dataset caption | Generate caption refinement samples |
 | dataset | strudel dataset assemble | Assemble all refined subsets into one training dataset |
 | eval | strudel eval codegen | Evaluate code-generation outputs by FRL |
-| eval | strudel eval codetrans | Render and score code-translation outputs from STRUDEL evaluation |
 | eval | strudel eval strudel | Evaluate a VLM on the STRUDEL benchmark from a VLM config |
-| eval | strudel eval testset | Evaluate a model on the STRUDEL benchmark |
+| eval | strudel eval codetrans | Render and score code-translation outputs from STRUDEL evaluation |
 
 ## Data generation
 
@@ -115,7 +114,7 @@ strudel personas filter \
     --query-path data/categories_all.json
 ```
 
-### Ddata generation
+### Data generation
 Generate dataset using the personas as input:
 ```bash
 strudel dataset generate \
