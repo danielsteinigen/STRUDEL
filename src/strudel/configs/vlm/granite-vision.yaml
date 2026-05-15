@@ -1,5 +1,5 @@
 engine:
-  model: ibm-granite/granite-vision-3.2-2b
+  model: ibm-granite/granite-vision-3.3-2b
   trust_remote_code: true
   max_model_len: 16384
   max_num_seqs: 256

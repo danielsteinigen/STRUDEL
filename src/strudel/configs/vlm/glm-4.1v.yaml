@@ -1,5 +1,5 @@
 engine:
-  model: THUDM/GLM-4.1V-9B-Thinking
+  model: zai-org/GLM-4.1V-9B-Thinking
   trust_remote_code: true
   max_model_len: 16384
   max_num_seqs: 256

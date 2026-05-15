@@ -1,5 +1,5 @@
 engine:
-  model: openbmb/MiniCPM-V-2_6
+  model: openbmb/MiniCPM-V-4_5
   trust_remote_code: true
   max_model_len: 16384
   max_num_seqs: 256

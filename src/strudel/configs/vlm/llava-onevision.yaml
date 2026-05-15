@@ -1,5 +1,5 @@
 engine:
-  model: llava-hf/llava-onevision-qwen2-7b-ov-hf
+  model: llava-hf/llava-onevision-qwen2-72b-ov-hf
   trust_remote_code: true
   max_model_len: 32768
   max_num_seqs: 256

@@ -1,5 +1,5 @@
 engine:
-  model: AIDC-AI/Ovis2-8B
+  model: AIDC-AI/Ovis2.5-9B
   trust_remote_code: true
   max_model_len: 16384
   max_num_seqs: 256

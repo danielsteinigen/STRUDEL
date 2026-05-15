@@ -1,5 +1,5 @@
 engine:
-  model: deepseek-ai/deepseek-vl2-small
+  model: deepseek-ai/deepseek-vl2
   trust_remote_code: true
   max_model_len: 4096
   max_num_seqs: 256
